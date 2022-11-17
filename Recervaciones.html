@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Restaurant</title>
+
+	<!-- Normalize V8.0.1 -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- MDBootstrap V5 -->
+	<link rel="stylesheet" href="./css/mdb.min.css">
+
+	<!-- Font Awesome V5.15.1 -->
+	<link rel="stylesheet" href="./css/all.css">
+
+	<!-- Sweet Alert V10.13.0 -->
+	<script src="./js/sweetalert2.js" ></script>
+
+	<!-- General Styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body id="main-body">
+
+	<!-- Header -->
+	<header class="header full-box bg-white">
+	    <div class="header-brand full-box">
+	        <a href="index.html">
+	            <img src="./assets/img/logo1.png" alt="Designlopers" class="img-fluid">
+	        </a>
+	    </div>
+
+	    <div class="header-options full-box">
+	        <nav class="header-navbar full-box poppins-regular font-weight-bold scroll" onclick="show_menu_mobile()" >
+	            <ul class="list-unstyled full-box" >
+	                <li>
+	                    <a href="index.html" >Inicio</a>
+	                </li>
+	                <li>
+	                    <a href="menu.html" >Menú</a>
+	                </li>
+                  <li>
+	                   <a href="Recervaciones.html">Recervaciones</a>
+                   </li>
+				  
+				   <li>
+						<a href="Contactos.html">Contactos</a>
+					</li>
+				   
+	            </ul>
+	        </nav>
+			<form class="d-flex" role="search">
+				<input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+				<button class="btn btn-outline-dark" type="submit">Buscar</button>
+			  </form>
+	    </div>
+	</header>
+
+
+	        
+	                </form>
+
+	            
+	                            
+	                        
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="container container-web-page">
+		<h3 class="font-weight-bold poppins-regular text-uppercase">Reservaciones.</h3>
+	    <p class="text-justify">Completa todos los campos para el registro correcto de los datos para la reservacion. Procurar no dejar los campos vacios ni colocar datos erroneos de lo contrario no se guardaran los datos.<i class="fab fa-font-awesome-alt"></i></p>
+		<hr>
+
+		<div class="row">
+			<div class="col-12">
+				<form class="div-bordered" action="" style="padding: 15px;">
+					<fieldset>
+						<legend><i class="far fa-address-card"></i> &nbsp; Datos para la reservacion.</legend>
+						<div class="container-fluid">
+							<div class="row">
+
+								<div class="col-12 col-md-6">
+									<div class="form-outline mb-4">
+	                                    <input type="text" class="form-control" name="cliente_nombre_reg" id="cliente_nombre" maxlength="35">
+	                                    <label for="cliente_nombre" class="form-label">Nombre <i class="fab fa-font-awesome-alt"></i></label>			
+	                                </div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="form-outline mb-4">
+	                                    <input type="text" class="form-control" name="cliente_nombre_reg" id="cliente_apellido" maxlength="35">
+	                                    <label for="cliente_apellido" class="form-label">Apellido <i class="fab fa-font-awesome-alt"></i></label>			
+	                                </div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="form-outline mb-4">
+	                                    <input type="text" class="form-control" name="cliente_nombre_reg" id="cliente_fecha">
+	                                    <label for="cliente_fecha" class="form-label">Fecha <i class="fab fa-font-awesome-alt"></i></label>			
+	                                </div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="form-outline mb-4">
+	                                    <input type="time" class="form-control" name="cliente_nombre_reg" id="cliente_Hora">
+	                                    <label for="cliente_Hora" class="form-label"></label>			
+	                                </div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="form-outline mb-4">
+	                                    <input type="number" class="form-control" name="cliente_nombre_reg" id="cliente_Mesa">
+	                                    <label for="cliente_Mesa" class="form-label">Personas por mesa <i class="fab fa-font-awesome-alt"></i></label>			
+	                                </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 pt-3">
+									<button id="idBtnAgregar" type="button" class="btn btn-primary">
+										<i class="bi bi-person-plus-fill"></i> Guardar Datos
+									</button>
+									<button id="idBtnMostrar" type="button" class="btn btn-dark">
+										<i class="bi bi-people"></i> Mostrar Reservaciones
+								</div>
+							</div>
+
+
+						</div>
+
+					</fieldset>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="container container-web-page">
+		<h3 class="font-weight-bold poppins-regular text-uppercase">Reservaciones Realizadas.</h3>
+		<div class="row">
+			<div class="col-12">
+				<form class="div-bordered" action="" style="padding: 15px;">
+					<div class="col-12 shadow-lg p-3  bg-body rounded">
+						<div id="idTablaReservacion">
+							Ninguno
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- Footer -->
+	<footer class="footer">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" ><i class="far fa-copyright"></i>Practico3</h5></li>
+	                    <li> Todos los derechos reservados </li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >El Salvador</h5></li>
+	                    <li><i class="fas fa-map-marker-alt fa-fw"></i> San Salvador, El Salvador, Centro América</li>
+	                </ul>
+	            </div>
+	            
+	        </div>
+	    </div>
+	</footer>
+	
+	
+	<!-- MDBootstrap V5 -->
+	<script src="./js/mdb.min.js" ></script>
+
+	<!-- fslightbox -->
+	<script src="./js/fslightbox.js" ></script>
+
+	<!-- General scripts -->
+	<script src="./js/main.js" ></script>
+
+	<!-- reservacion scripts -->
+	<script src="./js/reservacion.js" ></script>
+</body>
+</html>
